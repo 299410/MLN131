@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}
+
+@layer components {
+  .liquid-glass {
+    background: rgba(255, 255, 255, 0.4);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 69, 19, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafaf9; /* stone-50 */
+  color: #1c1917; /* stone-900 */
+  scroll-behavior: smooth;
+}
