@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import AnimatedText from './AnimatedText';
 
 export default function TraditionalSection() {
   const containerRef = useRef(null);
@@ -25,7 +26,10 @@ export default function TraditionalSection() {
           <div className="space-y-6 text-stone-600 text-base leading-relaxed">
             <p>
               <strong className="text-stone-900 font-medium font-serif text-lg">Từ "Tứ đại đồng đường" đến "Gia đình hạt nhân"</strong><br/>
-              Gia đình truyền thống phổ biến là mô hình mở rộng (3-4 thế hệ) nhằm tối ưu hóa lao động nông nghiệp lúa nước và đảm bảo an sinh. Ngày nay, quá trình hạt nhân hóa chiếm chủ đạo (&gt;70%), kéo theo sự xuất hiện của hộ độc thân, đơn thân hay DINKs.
+              <AnimatedText 
+                text="Gia đình truyền thống phổ biến là mô hình mở rộng (3-4 thế hệ) nhằm tối ưu hóa lao động nông nghiệp lúa nước và đảm bảo an sinh. Ngày nay, quá trình hạt nhân hóa chiếm chủ đạo (>70%), kéo theo sự xuất hiện của hộ độc thân, đơn thân hay DINKs."
+                className="mt-2"
+              />
             </p>
             
             <div className="pt-6 border-t border-stone-200">

@@ -8,6 +8,8 @@ import PolicySection from './components/PolicySection';
 import QuizSection from './components/QuizSection';
 import ConclusionSection from './components/ConclusionSection';
 import Preloader from './components/Preloader';
+import MarqueeSection from './components/MarqueeSection';
+import BottomNav from './components/BottomNav';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +38,7 @@ function App() {
 
       <main className={`bg-stone-50 min-h-screen text-stone-900 font-sans selection:bg-red-800/20 ${!showContent ? 'opacity-0' : 'opacity-100'} transition-opacity duration-1000`}>
         <HeroSection />
+        <MarqueeSection />
         <TimelineSection />
         <TraditionalSection />
         <ComparisonSection />
@@ -44,12 +47,14 @@ function App() {
         <QuizSection />
         <ConclusionSection />
         
-        <footer className="bg-stone-100 py-12 border-t border-stone-200 text-center relative z-10">
+        <footer className="bg-stone-100 py-12 border-t border-stone-200 text-center relative z-10 pb-32">
           <p className="text-stone-500 text-sm">
             Triển lãm số: Gia đình Việt Nam 4.0 – Giữ hồn truyền thống, sống cùng hiện đại.
           </p>
         </footer>
       </main>
+
+      {showContent && <BottomNav />}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Magnet from './Magnet';
 
 const situations = [
   {
@@ -152,12 +153,14 @@ export default function QuizSection() {
               animate={{ opacity: 1 }}
               className="mt-8 pt-6 border-t border-stone-200 flex justify-end"
             >
-              <button 
-                onClick={nextQ}
-                className="bg-stone-900 text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition-colors shadow-lg"
-              >
-                {currentQ < situations.length - 1 ? 'Tình huống tiếp theo' : 'Làm lại'}
-              </button>
+              <Magnet padding={40}>
+                <button 
+                  onClick={nextQ}
+                  className="bg-stone-900 text-white px-8 py-3 rounded-full text-sm font-medium hover:bg-stone-800 transition-colors shadow-[var(--shadow-complex-primary)]"
+                >
+                  {currentQ < situations.length - 1 ? 'Tình huống tiếp theo' : 'Làm lại'}
+                </button>
+              </Magnet>
             </motion.div>
           )}
         </div>
