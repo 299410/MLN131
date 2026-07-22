@@ -7,6 +7,7 @@ import ComparisonSection from './components/ComparisonSection';
 import PolicySection from './components/PolicySection';
 import QuizSection from './components/QuizSection';
 import ConclusionSection from './components/ConclusionSection';
+import CreditsSection from './components/CreditsSection';
 import Preloader from './components/Preloader';
 import MarqueeSection from './components/MarqueeSection';
 import BottomNav from './components/BottomNav';
@@ -46,6 +47,8 @@ function App() {
         <PolicySection />
         <QuizSection />
         <ConclusionSection />
+        <CreditsSection />
+        
         
         <footer className="bg-stone-100 py-12 border-t border-stone-200 text-center relative z-10 pb-32">
           <p className="text-stone-500 text-sm">
