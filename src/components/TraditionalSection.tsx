@@ -9,8 +9,8 @@ export default function TraditionalSection() {
     offset: ["start end", "end start"]
   });
 
-  const imgY = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["10%", "-5%"]);
+  const imgY = useTransform(scrollYProgress, [0, 1], ["-5%", "5%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.8, 1], [0, 1, 1, 0.5]);
 
   return (
@@ -49,11 +49,11 @@ export default function TraditionalSection() {
           </div>
         </motion.div>
 
-        <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-3xl overflow-hidden liquid-glass p-2 shadow-2xl shadow-stone-900/10 group">
+        <div className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden liquid-glass p-2 shadow-2xl shadow-stone-900/10 group">
           <div className="absolute inset-0 bg-stone-900/5 group-hover:bg-transparent transition-colors z-10 duration-700 pointer-events-none" />
           <motion.img 
-            style={{ y: imgY, scale: 1.15 }}
-            src="/traditional_warm.png" 
+            style={{ y: imgY, scale: 1.05 }}
+            src="/gia-dinh-truyen-thong.webp" 
             alt="Gia đình truyền thống đa thế hệ" 
             className="w-full h-full object-cover rounded-2xl filter brightness-95 group-hover:brightness-105 transition-all duration-700 origin-center"
           />
