@@ -11,7 +11,7 @@ export default function AnimatedText({ text, className = '' }: AnimatedTextProps
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ['start 0.8', 'start 0.2']
+    offset: ['start 0.9', 'start 0.5']
   });
 
   const words = text.split(' ');
